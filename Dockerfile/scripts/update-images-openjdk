@@ -1,0 +1,18 @@
+#!/bin/bash
+docker pull eclipse-temurin:latest
+docker pull eclipse-temurin:8-jre
+docker pull eclipse-temurin:8-jre-alpine
+docker pull eclipse-temurin:11-jre
+docker pull eclipse-temurin:11-jre-alpine
+docker pull eclipse-temurin:17-jre
+docker pull eclipse-temurin:17-jre-alpine
+docker pull eclipse-temurin:19-jre
+docker pull eclipse-temurin:19-jre-alpine
+docker pull eclipse-temurin:8-jdk
+docker pull eclipse-temurin:8-jdk-alpine
+docker pull eclipse-temurin:11-jdk
+docker pull eclipse-temurin:11-jdk-alpine
+docker pull eclipse-temurin:17-jdk
+docker pull eclipse-temurin:17-jdk-alpine
+docker pull eclipse-temurin:19-jdk
+docker pull eclipse-temurin:19-jdk-alpine
