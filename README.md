@@ -9,4 +9,7 @@ A partir dos releases oficiais do imagem container docker do Eclipse Temurin Ope
 
 Atualmente configurado para utilização dos drivers de JDBC do Oracle DBMS versão 6
 
-Como resultado deste repositorio é criar imagens comitadas para o Docker Hub que poderiam ser baixadas, o ideal é tentar utilizar diretamente os resultados em: docker pull fabioleitao/wildfly_t1r:et-ojdk17-a_w26.1.1-final (exemplo de imagem montada com openJDK17 rodando Wildfly 26.1.1 em AlpineLinux)
+Como resultado deste repositorio é criar imagens comitadas para o Docker Hub que poderiam ser baixadas, o ideal é tentar utilizar diretamente os resultados em: 
+"docker pull fabioleitao/wildfly_t1r:et-ojdk17-a_w26.1.1-final" (exemplo de imagem montada com openJDK17 rodando Wildfly 26.1.1 em AlpineLinux)
+
+https://hub.docker.com/repository/docker/fabioleitao/wildfly_t1r/general
