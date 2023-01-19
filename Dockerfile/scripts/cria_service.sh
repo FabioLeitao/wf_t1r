@@ -26,7 +26,7 @@ function cria_serv_(){
 	--mount type=bind,source=/Dockerfile/wildfly/deployment,destination=/opt/wildfly/standalone/deployments \
 	--host host.docker.internal:172.17.0.1 \
 	--name tosp \
-	wildfly_t1r:${VERSAO_SOLICITADA}
+	fabioleitao/wildfly_t1r:${VERSAO_SOLICITADA}
 }
 
 if [ $# -lt 1 ]; then
