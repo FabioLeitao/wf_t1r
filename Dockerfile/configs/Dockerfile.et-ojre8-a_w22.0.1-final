@@ -45,7 +45,7 @@ COPY wildfly/standalone.xml ${JBOSS_HOME}/standalone/configuration
 #USER jboss
 
 # Expose the ports we're interested in
-EXPOSE 8081 9990 9999 8009 45700 7600 57600 
+EXPOSE 8080 9990 9999 8009 45700 7600 57600 
 
 EXPOSE 23364/udp 55200/udp 54200/udp 45688/udp
 
