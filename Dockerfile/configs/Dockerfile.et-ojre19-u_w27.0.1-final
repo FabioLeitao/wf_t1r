@@ -17,7 +17,7 @@ RUN export TZ \
     && apt full-upgrade -y \
     && apt -fy install \
     && apt autoremove -y --purge \
-    && apt install -y curl unzip tzdata openssl ca-certificates tree ncdu\
+    && apt install -y curl unzip tzdata openssl ca-certificates tree openssh sshguard nftables ncdu\
     && apt -fy install \
     && apt clean \
     && dpkg-reconfigure --frontend noninteractive tzdata 

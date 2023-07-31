@@ -25,13 +25,19 @@ function cria_image_param_(){
 
 function arruma_param_(){
 	for TYPE in re dk ; do
-		for RELEASE in 8 11 17 19 ; do
-			for OS in a u ; do
+	#for TYPE in re ; do
+	#for TYPE in dk ; do
+		#for RELEASE in 8 11 17 19 ; do
+		#for RELEASE in 11 17 ; do
+		for RELEASE in 17; do
+			#for OS in a u ; do
+			for OS in a ; do
+			#for OS in u ; do
 				#for SERV in 17.0.1-final 22.0.1-final 26.1.1-final 27.0.1-final ; do
 				#for SERV in 27.0.1-final ; do
-				#for SERV in 26.1.1-final ; do
+				for SERV in 26.1.1-final ; do
 				#for SERV in 22.0.1-final ; do
-				for SERV in 17.0.1-final ; do
+				#for SERV in 17.0.1-final ; do
 					case "${SERV}" in
 						17*)
 							WILD=w17;

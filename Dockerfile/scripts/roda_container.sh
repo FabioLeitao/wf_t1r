@@ -8,7 +8,8 @@ function ajuda_(){
 }
 
 function roda_versao_(){
-	docker run -it --rm --name tosp -v /Dockerfile/wildfly/deployment:/opt/wildfly/standalone/deployments -v /Dockerfile/wildfly/log_${WILD}:/opt/wildfly/standalone/log -v /Dockerfile/wildfly/configuration_${WILD}:/opt/wildfly/standalone/configuration -v /Dockerfile/wildfly/bin_${WILD}:/opt/wildfly/bin -p 8080:8080 -p 9990:9990 fabioleitao/wildfly_t1r:${VERSAO_SOLICITADA}
+	docker run -it --rm --name tosp -v /Dockerfile/wildfly/deployments:/opt/wildfly/standalone/deployments -v /Dockerfile/wildfly/log_${WILD}:/opt/wildfly/standalone/log -v /Dockerfile/wildfly/configuration_${WILD}:/opt/wildfly/standalone/configuration -v /Dockerfile/wildfly/bin_${WILD}:/opt/wildfly/bin -p 8080:8080 -p 9990:9990 fabioleitao/wildfly_t1r:${VERSAO_SOLICITADA}
+	#docker run -it --rm --security-opt="no-new-privileges=true" --name tosp -v /Dockerfile/wildfly/deployments:/opt/wildfly/standalone/deployments -v /Dockerfile/wildfly/log_${WILD}:/opt/wildfly/standalone/log -v /Dockerfile/wildfly/configuration_${WILD}:/opt/wildfly/standalone/configuration -v /Dockerfile/wildfly/bin_${WILD}:/opt/wildfly/bin -p 8080:8080 -p 9990:9990 fabioleitao/wildfly_t1r:${VERSAO_SOLICITADA}
 }
 
 if [ $# -lt 1 ]; then

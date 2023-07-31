@@ -7,7 +7,9 @@ LABEL org.opencontainer.image.author="Fabio Leitao <fabio.leitao.ext@ictsirio.co
 ENV TZ 'America/Sao_Paulo'
 ENV LAUNCH_JBOSS_IN_BACKGROUND=true
 RUN export TZ \
-     && apk upgrade --no-cache --available && apk --no-cache add curl unzip tzdata doas openssl ca-certificates tree ncdu
+     && apk upgrade --no-cache --available && apk --no-cache add curl unzip tzdata doas openssl ca-certificates tree openssh sshguard nftables ncdu \
+     && echo -e \#\!/bin/sh\\nBACKEND='/usr/libexec/sshg-fw-nft-sets'\\nFILES='/var/log/messages' > /etc/sshguard.conf \
+     && echo -e 10.21.64.104\\n10.21.64.50\\n10.21.64.136\\n10.21.0.33\\n10.21.0.34\\n10.21.0.14\\n10.98.180.0\/24\\n10.31.1.0\/24 > /etc/sshguard.whitelist
 #    && adduser -D jboss \
 #    && echo 'jboss:Infra@T1R_2023' | chpasswd \
 #    && echo 'permit jboss as root' > /etc/doas.d/doas.conf 
@@ -45,7 +47,7 @@ COPY wildfly/standalone.xml ${JBOSS_HOME}/standalone/configuration
 #USER jboss
 
 # Expose the ports we're interested in
-EXPOSE 8080 9990 9999 8009 45700 7600 57600 
+EXPOSE 8081 9990 9999 8009 45700 7600 57600 
 
 EXPOSE 23364/udp 55200/udp 54200/udp 45688/udp
 

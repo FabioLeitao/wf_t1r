@@ -23,7 +23,7 @@ function cria_serv_(){
 	--mount type=bind,source=/Dockerfile/wildfly/bin_${WILD},destination=/opt/wildfly/bin \
 	--mount type=bind,source=/Dockerfile/wildfly/log_${WILD},destination=/opt/wildfly/standalone/log \
 	--mount type=bind,source=/Dockerfile/wildfly/configuration_${WILD},destination=/opt/wildfly/standalone/configuration \
-	--mount type=bind,source=/Dockerfile/wildfly/deployment,destination=/opt/wildfly/standalone/deployments \
+	--mount type=bind,source=/Dockerfile/wildfly/deployments,destination=/opt/wildfly/standalone/deployments \
 	--host host.docker.internal:172.17.0.1 \
 	--name tosp \
 	fabioleitao/wildfly_t1r:${VERSAO_SOLICITADA}
