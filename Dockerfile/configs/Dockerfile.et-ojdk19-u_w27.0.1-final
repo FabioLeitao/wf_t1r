@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.4
+# syntax=docker/dockerfile:1.5
 ARG JDK_RELEASE=19-jdk
 FROM eclipse-temurin:${JDK_RELEASE}
 LABEL org.opencontainer.image.author="Fabio Leitao <fabio.leitao.ext@ictsirio.com>"
